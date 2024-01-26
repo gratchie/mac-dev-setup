@@ -1,4 +1,4 @@
-# Ansible macos roles and Playbooks
+# Ansible macos roles and playbooks
 
 ## Install pre requisites
 
