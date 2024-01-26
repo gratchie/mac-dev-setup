@@ -1,3 +1,0 @@
----
-yum_el7_packages:
-  - vim-enhanced

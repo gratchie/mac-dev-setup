@@ -1,7 +1,0 @@
----
-# roles/common/tasks/redhat.yml
-
-- name: Install Redhat Packages
-  yum: name={{ item }} state=present
-  with_items: 
-    - "{{ yum_packages }}"

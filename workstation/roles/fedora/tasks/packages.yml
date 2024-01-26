@@ -1,7 +1,0 @@
----
-- name: Install dnf packages
-  dnf: name={{ item }} state=present 
-  with_items: 
-    - "{{ yum_packages }}"
-    - "{{ yum_27_packages }}"
-
