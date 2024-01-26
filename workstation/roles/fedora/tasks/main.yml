@@ -1,0 +1,38 @@
+---
+# roles/common/tasks/fedora.yml
+
+- include: chrome.yml
+- include: vscode.yml
+- include: packages.yml 
+  when: ansible_distribution == "Fedora" and ansible_distribution_major_version|int >= 22
+
+- include: docker.yml
+  tags: 
+    - docker
+
+- name: disable static motd file
+  lineinfile:
+    dest: "/etc/ssh/sshd_config"
+    regexp: "PrintMotd"
+    line: "PrintMotd no"
+  notify:
+    - restart sshd
+
+- name: dynmotd
+  copy:
+    src: dynmotd
+    dest: /usr/local/bin/dynmotd
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Update profile
+  lineinfile:
+    dest: "/etc/profile"
+    insertafter: EOF
+    line: /usr/local/bin/dynmotd
+
+- name: Update and upgrade system
+  dnf: name=* state=latest
+  tags: update
+  ignore_errors: yes

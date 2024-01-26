@@ -1,0 +1,7 @@
+---
+- copy: src=vscode.repo
+    dest=/etc/yum.repos.d/vscode.repo
+    owner=root group=root mode=644
+
+- name: Install Visual Studio Code
+  dnf: pkg=code state=installed

@@ -1,0 +1,23 @@
+[epel-nvidia]
+name=negativo17 - Nvidia
+baseurl=https://negativo17.org/repos/nvidia/epel-$releasever/$basearch/
+enabled=1
+skip_if_unavailable=1
+gpgcheck=1
+gpgkey=https://negativo17.org/repos/RPM-GPG-KEY-slaanesh
+enabled_metadata=1
+metadata_expire=6h
+type=rpm-md
+repo_gpgcheck=0
+
+[epel-nvidia-source]
+name=negativo17 - Nvidia - Source
+baseurl=https://negativo17.org/repos/nvidia/epel-$releasever/SRPMS
+enabled=0
+skip_if_unavailable=1
+gpgcheck=1
+gpgkey=https://negativo17.org/repos/RPM-GPG-KEY-slaanesh
+enabled_metadata=1
+metadata_expire=6h
+type=rpm-md
+repo_gpgcheck=0

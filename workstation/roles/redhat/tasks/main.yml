@@ -1,0 +1,13 @@
+---
+# roles/rhel/tasks/main.yml
+- include: chrome.yml 
+- include: vscode.yml
+
+- name: Install yum packages 
+  yum: name={{ item }} state=present 
+  with_items:
+    - "{{ yum_packages }}"
+    - "{{ yum_el7_packages }}"
+  when: ansible_os_family == "RedHat" and ansible_lsb.major_release|int >= 5
+  tags:
+    - pkg

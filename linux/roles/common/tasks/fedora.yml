@@ -1,0 +1,7 @@
+---
+# roles/common/tasks/fedora.yml
+
+- name: Install Fedora Packages
+  dnf: name={{ item }} state=present
+  with_items: 
+    - "{{ dnf_packages }}"

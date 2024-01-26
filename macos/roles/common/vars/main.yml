@@ -1,0 +1,55 @@
+---
+# roles/common/vars/main.yml 
+
+brew_packages: 
+  - ansible
+  - gnupg
+  - curl 
+  - htop 
+  - openssl 
+  - python 
+  - sqlite 
+  - tree 
+  - wget 
+  - jq 
+  - nmap 
+  - iperf 
+  - httpie 
+  - git 
+  - bash-completion 
+  - nvm
+  - pnpm
+  - awscli 
+  - coreutils 
+  - unzip 
+  - packer
+  - terraform
+  - docker-compose
+  - speedtest-cli 
+  - azure-cli
+  - terragrunt
+  - yq
+  - pre-commit
+  - imagemagick
+  - pyenv 
+
+brew_cask_packages:
+  - postman
+  - spotify
+  - rar
+  - iterm2
+  - google-chrome
+  - firefox
+  - slack
+  - discord
+  - keybase
+  - signal
+  - 1password
+  - google-cloud-sdk
+  - visual-studio-code
+  - zoom
+  - vlc
+  - microsoft-teams
+  - microsoft-office
+  - microsoft-auto-update
+  - microsoft-edge
