@@ -2,17 +2,24 @@
 # roles/common/tasks/main.yml 
 
 # Brew
-- name: Install brew packages
+- name: Install BREW packages
   community.general.homebrew:
     name: "{{ item }}"
     state: present
     update_homebrew: yes
   loop: "{{ brew_packages }}"
 
-# Cask packages
+# Cask
 - name: Install brew CASK packages
   community.general.homebrew_cask:
     name: "{{ item }}"
     install_options: 'cask,appdir=/Applications'
     state: present
   loop: "{{ brew_cask_packages }}"
+
+# Taps
+- name: Install brew TAPS packages
+  community.general.homebrew_tap:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ brew_tap_packages }}"
