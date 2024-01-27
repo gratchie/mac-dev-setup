@@ -17,9 +17,21 @@ export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /opt/homebrew/opt/zlib/lib/pkgconfig"
 export ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git kubectl)
+plugins=(git kubectl zsh-autosuggestions zsh-syntax-highlighting)
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_DISABLE_COMPFIX=true
+
+# Git Aliases 
+alias gs="git status"
+alias gd="git diff"
+alias gl="git lg"
+alias ga="git add"
+alias gpo="git push origin"
+alias gb="git branch"
+alias gf="git fetch"
+alias gc="git commit"
+
+autoload -U compinit && compinit
 
 # Load personal pre oh-my-zsh init config which should be stored in ~/.zshrc.personal.before
 # E.g. setting ZSH theme etc
