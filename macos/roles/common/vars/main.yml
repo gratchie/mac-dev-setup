@@ -34,7 +34,6 @@ brew_packages:
   - pyenv
   - zsh-autosuggestions
   - zsh-syntax-highlighting
-  - font-hack-nerd-font
 
 brew_cask_packages:
   - devtoys
