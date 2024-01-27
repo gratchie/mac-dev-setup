@@ -31,6 +31,19 @@ alias gb="git branch"
 alias gf="git fetch"
 alias gc="git commit"
 
+# Docker
+alias dil='docker images list'
+alias dcp='docker container prune -f'
+alias di='docker images'
+alias dpa='docker ps -a'
+alias dp='docker pull'
+alias drf='docker rmi -f'
+alias dsp='docker system prune -f'
+
+# Other
+alias tf='terraform'
+alias kcl='kubectl'
+
 autoload -U compinit && compinit
 
 # Load personal pre oh-my-zsh init config which should be stored in ~/.zshrc.personal.before
