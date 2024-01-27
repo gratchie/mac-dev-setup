@@ -9,19 +9,16 @@
     force: yes
 
 - name: Install VSCode extensions
-  shell: code --install-extensions {{ item }}
+  shell: code --install-extension {{ item }}
   with_items:
     - aaron-bond.better-comments
     - adpyke.codesnap
     - alefragnani.project-manager
     - almenon.arepl
-    - batisteo.vscode-django
     - Boto3typed.boto3-ide
     - christian-kohler.path-intellisense
     - codezombiech.gitignore
     - cstrap.python-snippets
-    - deerawan.vscode-dash
-    - demystifying-javascript.python-extensions-pack
     - donjayamanne.git-extension-pack
     - donjayamanne.githistory
     - donjayamanne.python-environment-manager
@@ -48,7 +45,6 @@
     - njqdev.vscode-python-typehint
     - oderwat.indent-rainbow
     - streetsidesoftware.code-spell-checker
-    - thebarkman.vscode-djaneiro
     - traBpUkciP.wolf
     - vscodevim.vim
     - wholroyd.jinja

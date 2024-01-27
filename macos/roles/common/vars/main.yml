@@ -58,6 +58,7 @@ brew_cask_packages:
   - microsoft-office
   - microsoft-auto-update
   - microsoft-edge
+  - font-fira-code
 
 brew_tap_packages:
   - homebrew/cask-fonts
