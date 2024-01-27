@@ -31,7 +31,9 @@ brew_packages:
   - yq
   - pre-commit
   - imagemagick
-  - pyenv 
+  - pyenv
+  - zsh-autosuggestions
+  - zsh-syntax-highlighting
 
 brew_cask_packages:
   - devtoys
