@@ -34,6 +34,9 @@ brew_packages:
   - pyenv 
 
 brew_cask_packages:
+  - devtoys
+  - grammarly
+  - grammarly-desktop
   - postman
   - spotify
   - rar
