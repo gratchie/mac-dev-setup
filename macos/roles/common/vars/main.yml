@@ -32,6 +32,7 @@ brew_packages:
   - pre-commit
   - imagemagick
   - pyenv
+  - stats
 
 brew_cask_packages:
   - devtoys
@@ -57,6 +58,7 @@ brew_cask_packages:
   - microsoft-auto-update
   - microsoft-edge
   - font-fira-code
+  - lm-studio
 
 brew_tap_packages:
   - homebrew/cask-fonts
