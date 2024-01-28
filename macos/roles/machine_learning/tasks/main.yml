@@ -1,11 +1,6 @@
 ---
 # roles/machine_learning/tasks/main.yml
 
-- name: Install latest PIP
-  ansible.builtin.pip:
-    name: pip
-    executable: pip3
-    state: latest
 
 - name: Install PIP packages
   ansible.builtin.pip:
@@ -13,6 +8,7 @@
     executable: pip3
   with_items:
     - streamlit
+    - streamlit-extras
     - watchdog
     - pylint
     - python-dotenv
@@ -23,6 +19,11 @@
     - requests
     - virtualenv
     - ipython
+    - tiktoken
+    - weaviate-client
+    - black
+    - boto3
+    - openai
 
 - name: Install PIP packages with User args
   ansible.builtin.pip:
@@ -36,4 +37,10 @@
     - jupyter
     - pandas
     - sympy
-    - nose 
+    - nose
+
+- name: Install latest PIP
+  ansible.builtin.pip:
+    name: pip
+    executable: pip3
+    state: latest
