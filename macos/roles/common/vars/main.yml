@@ -32,7 +32,6 @@ brew_packages:
   - pre-commit
   - imagemagick
   - pyenv
-  - stats
 
 brew_cask_packages:
   - devtoys

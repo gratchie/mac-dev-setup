@@ -1,18 +1,22 @@
 ---
 # main.yml
 
-- name: Install base packages
+# - name: Install base packages
+#   hosts: "{{ host | default('localhost') }}"
+#   roles: 
+#     - common
+
+# - name: Setup shell customization
+#   hosts: "{{ host | default('localhost') }}"
+#   roles: 
+#     - shell
+
+# - name: Setup Vscode
+#   hosts: "{{ host | default('localhost') }}"
+#   roles: 
+#     - vscode
+
+- name: Setup Machine Learning tools
   hosts: "{{ host | default('localhost') }}"
   roles: 
-    - common
-
-- name: Setup shell customization
-  hosts: "{{ host | default('localhost') }}"
-  roles: 
-    - shell
-
-- name: Setup Vscode
-  hosts: "{{ host | default('localhost') }}"
-  roles: 
-    - vscode
-
+    - machine_learning
