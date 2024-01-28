@@ -6,15 +6,15 @@
   roles: 
     - common
 
-# - name: Setup shell customization
-#   hosts: "{{ host | default('localhost') }}"
-#   roles: 
-#     - shell
+- name: Setup shell customization
+  hosts: "{{ host | default('localhost') }}"
+  roles: 
+    - shell
 
-# - name: Setup Vscode
-#   hosts: "{{ host | default('localhost') }}"
-#   roles: 
-#     - vscode
+- name: Setup Vscode
+  hosts: "{{ host | default('localhost') }}"
+  roles: 
+    - vscode
 
 - name: Setup Machine Learning tools
   hosts: "{{ host | default('localhost') }}"
