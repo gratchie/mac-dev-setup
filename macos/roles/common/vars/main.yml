@@ -58,6 +58,7 @@ brew_cask_packages:
   - microsoft-edge
   - font-fira-code
   - lm-studio
+  - miniconda
 
 brew_tap_packages:
   - homebrew/cask-fonts

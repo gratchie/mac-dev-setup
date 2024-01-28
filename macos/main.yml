@@ -1,10 +1,10 @@
 ---
 # main.yml
 
-# - name: Install base packages
-#   hosts: "{{ host | default('localhost') }}"
-#   roles: 
-#     - common
+- name: Install base packages
+  hosts: "{{ host | default('localhost') }}"
+  roles: 
+    - common
 
 # - name: Setup shell customization
 #   hosts: "{{ host | default('localhost') }}"
