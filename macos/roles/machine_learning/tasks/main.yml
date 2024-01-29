@@ -25,9 +25,11 @@
     - boto3
     - openai
     - llama-index
+    - llama-index[local_models]
+    - llama-index[query_tools]
     - datasets
     - langchain 
-    
+
 - name: Install PIP packages with User args
   ansible.builtin.pip:
     name: "{{ item }}"

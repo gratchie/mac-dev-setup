@@ -32,7 +32,8 @@ brew_packages:
   - pre-commit
   - imagemagick
   - pyenv
-
+  - obs
+  
 brew_cask_packages:
   - devtoys
   - grammarly
