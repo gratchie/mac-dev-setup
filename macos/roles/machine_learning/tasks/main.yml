@@ -26,7 +26,8 @@
     - openai
     - llama-index
     - datasets
-
+    - langchain 
+    
 - name: Install PIP packages with User args
   ansible.builtin.pip:
     name: "{{ item }}"
