@@ -24,6 +24,7 @@
     - black
     - boto3
     - openai
+    - llama-index
 
 - name: Install PIP packages with User args
   ansible.builtin.pip:
