@@ -33,7 +33,8 @@ brew_packages:
   - imagemagick
   - pyenv
   - obs
-  
+  - trino
+
 brew_cask_packages:
   - devtoys
   - grammarly
