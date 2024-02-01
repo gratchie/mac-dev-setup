@@ -32,8 +32,14 @@ brew_packages:
   - pre-commit
   - imagemagick
   - pyenv
-  - obs
+#  - stats
+#  - obs
   - trino
+  - s3cmd
+#  - 1password-cli
+  - cmake
+  - protobuf
+  - rust
 
 brew_cask_packages:
   - devtoys
