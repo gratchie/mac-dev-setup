@@ -29,6 +29,7 @@
     - llama-index[query_tools]
     - datasets
     - langchain 
+    - pandasai
 
 - name: Install PIP packages with User args
   ansible.builtin.pip:
