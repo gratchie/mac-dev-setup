@@ -46,6 +46,11 @@ alias kcl='kubectl'
 
 autoload -U compinit && compinit
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # Load personal pre oh-my-zsh init config which should be stored in ~/.zshrc.personal.before
 # E.g. setting ZSH theme etc
 if [ -f ~/.zshrc.personal.before ]; then . ~/.zshrc.personal.before; fi

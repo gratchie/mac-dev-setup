@@ -21,30 +21,33 @@ brew_packages:
   - pnpm
   - awscli 
   - coreutils 
-  - unzip 
-  - packer
-  - terraform
-  - docker-compose
-  - speedtest-cli 
-  - azure-cli
+  - unzip
+  - hashicorp/tap/packer
+  - hashicorp/tap/terraform
   - terragrunt
   - yq
   - pre-commit
   - imagemagick
   - pyenv
-  - stats
-  - obs
   - trino
   - s3cmd
-  - 1password-cli
   - cmake
   - protobuf
   - rust
   - podman
+  - uv
+  - gh
+  - glab
+  - fzf
+  - ruff
+
+brew_tap_packages:
+  - hashicorp/tap
 
 brew_cask_packages:
-  - devtoys
-  - grammarly
+  - obs
+  - stats
+  - cursor
   - grammarly-desktop
   - postman
   - spotify
@@ -52,13 +55,9 @@ brew_cask_packages:
   - iterm2
   - google-chrome
   - firefox
-  - slack
   - discord
   - keybase
   - signal
-  - 1password
-  - google-cloud-sdk
-  - visual-studio-code
   - zoom
   - vlc
   - microsoft-teams
@@ -67,7 +66,4 @@ brew_cask_packages:
   - microsoft-edge
   - font-fira-code
   - lm-studio
-  - miniconda
-
-brew_tap_packages:
-  - homebrew/cask-fonts
+  - tableplus

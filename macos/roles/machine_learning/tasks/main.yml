@@ -1,54 +1,27 @@
 ---
 # roles/machine_learning/tasks/main.yml
 
+- name: Install Python 3.12 via pyenv
+  shell: pyenv install 3.12 --skip-existing
+
+- name: Set Python 3.12 as global default
+  shell: pyenv global 3.12
+
+- name: Bootstrap pip, setuptools and wheel
+  shell: pyenv exec pip install --upgrade pip setuptools wheel
 
 - name: Install PIP packages
-  ansible.builtin.pip:
-    name: "{{ item }}"
-    executable: pip3
-  with_items:
-    - streamlit
-    - streamlit-extras
-    - watchdog
-    - pylint
-    - python-dotenv
-    - requests
-    - setuptools
-    - six
-    - urllib3
-    - requests
-    - virtualenv
-    - ipython
-    - tiktoken
-    - weaviate-client
-    - black
-    - boto3
-    - openai
-    - llama-index
-    - llama-index[local_models]
-    - llama-index[query_tools]
-    - datasets
-    - langchain 
-    - pandasai
-    - vanna
-    
+  shell: pyenv exec pip install watchdog pylint python-dotenv requests six urllib3 virtualenv ipython tiktoken black boto3 openai datasets langchain vanna numpy scipy matplotlib jupyter pandas sympy nose anthropic litellm langgraph pydantic-ai instructor sentence-transformers chromadb qdrant-client transformers huggingface-hub mlx-lm langfuse unstructured pypdf markitdown httpx tenacity rich
 
-- name: Install PIP packages with User args
-  ansible.builtin.pip:
-    name: "{{ item }}"
-    executable: pip3
-  with_items:
-    - numpy
-    - scipy
-    - matplotlib
-    - ipython
-    - jupyter
-    - pandas
-    - sympy
-    - nose
+- name: Install Ollama
+  community.general.homebrew_cask:
+    name: ollama
+    state: present
 
-- name: Install latest PIP
-  ansible.builtin.pip:
-    name: pip
-    executable: pip3
-    state: latest
+- name: Install Claude Code
+  shell: curl -fsSL https://claude.ai/install.sh | bash
+  args:
+    creates: /usr/local/bin/claude
+
+- name: Install Cortex Code
+  shell: curl -LsS https://ai.snowflake.com/static/cc-scripts/install.sh | sh

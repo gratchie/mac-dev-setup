@@ -11,11 +11,6 @@
   roles: 
     - shell
 
-- name: Setup Vscode
-  hosts: "{{ host | default('localhost') }}"
-  roles: 
-    - vscode
-
 - name: Setup Machine Learning tools
   hosts: "{{ host | default('localhost') }}"
   roles: 
