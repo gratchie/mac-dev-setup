@@ -40,6 +40,7 @@ brew_packages:
   - glab
   - fzf
   - ruff
+  - npm
 
 brew_tap_packages:
   - hashicorp/tap
